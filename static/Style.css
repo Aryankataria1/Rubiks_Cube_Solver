@@ -1,0 +1,174 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: #f5f5f5;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 30px 16px;
+}
+
+.app {
+  max-width: 560px;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
+
+/* ─── Cube container ─── */
+#cube-root {
+  background: #0f172a;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+  overflow: hidden;
+}
+
+/* ─── UI panel below canvas ─── */
+.cube-ui {
+  padding: 0;
+}
+
+/* ─── Color palette ─── */
+.cube-palette {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 16px 10px;
+  background: #fafafa;
+}
+
+.pal-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+.pal-btn:hover { transform: scale(1.1); }
+.pal-btn.active {
+  outline: 3px solid #1e293b;
+  outline-offset: 2px;
+  transform: scale(1.1);
+}
+
+/* ─── Action buttons ─── */
+.cube-actions {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px 12px;
+}
+
+.action-btn {
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.action-btn.primary {
+  background: #16a34a;
+  color: #fff;
+  padding: 8px 28px;
+}
+.action-btn.primary:hover { background: #15803d; }
+
+.action-btn.secondary {
+  background: #e2e8f0;
+  color: #475569;
+}
+.action-btn.secondary:hover { background: #cbd5e1; }
+
+/* ─── Status text ─── */
+.cube-status {
+  font-size: 12px;
+  color: #94a3b8;
+  padding: 0 16px 14px;
+  text-align: center;
+}
+
+/* ─── Solve mode banner ─── */
+.solve-banner {
+  text-align: center;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #94a3b8;
+  background: #fafafa;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.solve-banner.active {
+  background: #1e293b;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.solve-banner.solved {
+  background: #16a34a;
+  color: #fff;
+  font-size: 18px;
+}
+
+/* ─── Solve controls ─── */
+.solve-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+}
+
+.ctrl-btn {
+  width: 42px;
+  height: 36px;
+  font-size: 16px;
+  background: #1e293b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ctrl-btn:hover { background: #334155; }
+
+.ctrl-btn.play-btn {
+  width: auto;
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: 600;
+  gap: 4px;
+}
+
+.solve-counter {
+  font-size: 14px;
+  font-weight: 700;
+  color: #94a3b8;
+  margin-left: 8px;
+  min-width: 50px;
+}

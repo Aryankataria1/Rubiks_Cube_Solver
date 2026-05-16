@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rubik's Cube Solver</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/Style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="/static/cube3d.js"></script>
+</head>
+<body>
+  <div class="app">
+    <h1>Rubik's Cube Solver</h1>
+    <p class="subtitle">Click a color, then click stickers on the cube to paint them. Hit Solve when ready.</p>
+    <div id="cube-root"></div>
+  </div>
+
+  <script>
+    const root = document.getElementById('cube-root');
+    new RubiksCube3D(root);
+  </script>
+</body>
+</html>
